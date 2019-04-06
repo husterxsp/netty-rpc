@@ -15,6 +15,10 @@
         <constructor-arg name="zkAddress" value="${rpc.registry_address}"/>
     </bean>
 
+    <!--<bean id="serviceRegistry" class="com.rpc.registry.etcd.EtcdServiceRegistry">-->
+        <!--<constructor-arg name="etcdAddress" value="${rpc.registry_address}"/>-->
+    <!--</bean>-->
+
     <bean id="rpcServer" class="com.rpc.server.RpcServer">
         <constructor-arg name="serviceAddress" value="${rpc.service_address}"/>
         <constructor-arg name="serviceRegistry" ref="serviceRegistry"/>

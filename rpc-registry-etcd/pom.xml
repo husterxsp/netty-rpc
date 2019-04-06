@@ -23,7 +23,7 @@
             <artifactId>rpc-common</artifactId>
             <version>${project.version}</version>
         </dependency>
-        <!-- RPC Registry -->
+         <!--RPC Registry -->
         <dependency>
             <groupId>com.rpc</groupId>
             <artifactId>rpc-registry</artifactId>
@@ -33,7 +33,36 @@
         <dependency>
             <groupId>org.mousio</groupId>
             <artifactId>etcd4j</artifactId>
+            <version>2.15.0</version>
+            <exclusions>
+                <!--<exclusion>-->
+                    <!--&lt;!&ndash;被排除的依赖包坐标&ndash;&gt;-->
+                    <!--<groupId>io.netty</groupId>-->
+                    <!--<artifactId>netty-resolver-dns</artifactId>-->
+                <!--</exclusion>-->
+            </exclusions>
         </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.8.11.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>2.8.11</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>2.8.11</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.module</groupId>
+            <artifactId>jackson-module-afterburner</artifactId>
+            <version>2.8.11</version>
+        </dependency>
+
     </dependencies>
 
 </project>

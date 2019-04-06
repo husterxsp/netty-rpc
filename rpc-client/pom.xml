@@ -18,10 +18,9 @@
             <artifactId>rpc-common</artifactId>
             <version>${project.version}</version>
         </dependency>
-        <!-- RPC Registry with ZooKeeper -->
         <dependency>
             <groupId>com.rpc</groupId>
-            <artifactId>rpc-registry-zookeeper</artifactId>
+            <artifactId>rpc-registry</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>

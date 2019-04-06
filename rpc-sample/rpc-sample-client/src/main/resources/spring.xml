@@ -13,6 +13,10 @@
         <constructor-arg name="zkAddress" value="${rpc.registry_address}"/>
     </bean>
 
+    <!--<bean id="serviceDiscovery" class="com.rpc.registry.etcd.EtcdServiceDiscovery">-->
+        <!--<constructor-arg name="etcdAddress" value="${rpc.registry_address}"/>-->
+    <!--</bean>-->
+
     <bean id="rpcProxy" class="com.rpc.client.RpcProxy">
         <constructor-arg name="serviceDiscovery" ref="serviceDiscovery"/>
     </bean>

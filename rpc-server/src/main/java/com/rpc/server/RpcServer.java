@@ -50,6 +50,12 @@ public class RpcServer implements ApplicationContextAware, InitializingBean {
         this.serviceRegistry = serviceRegistry;
     }
 
+    /**
+     * 当一个类实现InitializingBean这个接口之后，Spring启动时，初始化Bean时，若该Bean实现InitializingBean接口，
+     * 则会自动调用afterPropertiesSet()方法，完成一些用户自定义的初始化操作。
+     *
+     * @throws Exception
+     */
     @Override
     public void afterPropertiesSet() throws Exception {
         EventLoopGroup bossGroup = new NioEventLoopGroup();
@@ -102,6 +108,15 @@ public class RpcServer implements ApplicationContextAware, InitializingBean {
         }
     }
 
+    /**
+     * https://blog.csdn.net/qq360694660/article/details/80537801
+     * Spring发现某个Bean实现了ApplicationContextAware接口，Spring容器会在创建该Bean之后，
+     * 自动调用该Bean的setApplicationContextAware()方法，调用该方法时，会将容器本身ApplicationContext对象作为参数传给该方法。
+     * 当一个类实现了这个接口之后，这个类就可以方便地获得ApplicationContext对象
+     *
+     * @param applicationContext
+     * @throws BeansException
+     */
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
 
