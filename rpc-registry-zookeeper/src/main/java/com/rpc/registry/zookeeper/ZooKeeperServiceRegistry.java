@@ -43,6 +43,10 @@ public class ZooKeeperServiceRegistry implements ServiceRegistry {
         // 另外watch本身也有要注意的，收到事件通知后，需要重新注册watcher。
         // https://www.jianshu.com/p/f0de7750c066
         String addressPath = servicePath + "/address-";
+        // 对于每个注册的地址，都创建一个临时顺序节点
+        // zookeeper的四种节点类型
+        // 持久节点（PERSISTENT）/持久顺序节点（PERSISTENT_SEQUENTIAL）
+        // 临时节点（EPHEMERAL）/临时顺序节点（EPHEMERAL_SEQUENTIAL）
         String addressNode = zkClient.createEphemeralSequential(addressPath, serviceAddress);
         LOGGER.debug("create address node: {}", addressNode);
     }

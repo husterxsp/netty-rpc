@@ -9,10 +9,9 @@
 
 ### 主要参考
 
-- https://my.oschina.net/huangyong/blog/361751
+- 轻量级分布式RPC框架-黄勇：https://my.oschina.net/huangyong/blog/361751
+- RPC框架几行代码就够了-梁飞：https://javatar.iteye.com/blog/1123915
 - https://github.com/hu1991die/netty-rpc
 - https://blog.csdn.net/arctan90/article/details/77835944
-
-
 
 
