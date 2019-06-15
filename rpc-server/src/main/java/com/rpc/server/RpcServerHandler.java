@@ -70,6 +70,8 @@ public class RpcServerHandler extends SimpleChannelInboundHandler<RpcRequest> {
 //        method.setAccessible(true);
 //        return method.invoke(serviceBean, parameters);
 
+        // cglib反射，可以改善java原生的反射性能 ???
+
         // 使用 CGLib 执行反射调用
         // 一般来说cglib是用来实现代理的。
         // 这里直接用 cglib 来进行反射调用

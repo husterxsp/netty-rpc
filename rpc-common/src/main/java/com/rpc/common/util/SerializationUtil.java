@@ -14,7 +14,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * 具备缓存功能的序列化工具类，原生的序列化性能效率较低，产生的码流较大，所以采用了Protostuff实现
  * 为什么原生的效率低？
  *
- * protostuff是一个基于protobuf实现的序列化方法，它较于protobuf最明显的好处是
+ * protostuff 是一个基于protobuf实现的序列化方法，它较于protobuf最明显的好处是
  * 在几乎不损耗性能的情况下做到了不用我们写.proto文件来实现序列化。
  *
  * @author xushaopeng
